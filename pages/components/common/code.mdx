@@ -1,0 +1,28 @@
+# Code
+
+import { Bleed } from 'nextra-theme-docs'
+import Image from 'next/image'
+
+Komponen ini akan eksekusi code JavaScript yang sesuai dengan konfigurasi dari komponen ini.
+
+Untuk mengirim data ke output gunakan `$.send('output', data);`
+
+```
+
+$.send('output', 'Message 1');
+
+```
+
+Untuk mengirim data ke spesifik output ketika jumlah dari output lebih dari 1 maka gunakan:
+
+```
+
+$.send('output', 'Message 1');
+$.send('output2', 'Message 2');
+$.send('output3', 'Message 3');
+
+```
+
+Maka hasilnya akan seperti ini
+
+![outputMultiple](/images/common/code/multipleOutput.png)

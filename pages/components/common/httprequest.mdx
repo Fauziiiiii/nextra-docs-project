@@ -1,0 +1,27 @@
+# HTTP Request
+
+Komponen ini akan membuat request HTTP. Dan response data akan di serialisasikan menjadi payload
+
+Komponen HTTP Request dalam Total.js Flow digunakan untuk melakukan permintaan HTTP ke server eksternal atau API. Komponen ini sangat berguna dalam berbagai skenario di mana kamu perlu berinteraksi dengan layanan pihak ketiga atau mengambil data dari server eksternal.
+
+### Response
+
+```js
+{
+    status: Number,
+    headers: { key: value},
+    cookies: { key: value},
+    host: String,
+    body: String/Object/Buffer
+}
+```
+
+### Contoh Penggunaan HTTP Request
+
+#### 1. Atur configuration HTTP Request
+
+![httpFlow](/images/common/httprequest/httpConfig.png)
+
+#### 2. Buat Alur Dan Trigger HTTP Request
+
+![httpFlow](/images/common/httprequest/flow.png)
