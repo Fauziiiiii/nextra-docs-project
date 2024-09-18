@@ -1,0 +1,37 @@
+# Data Sorter
+
+Komponen Data Sorter ini akan mengurutkan data berdasarkan kondisi yang ditentukan pada konfigurasi komponen ini. Kamu juga dapat menentukan
+jumlah output yang tidak terbatas dengan berbagai kondisi.
+
+Contoh penggunaan
+
+### 1. Download komponen-komponen ini lalu letakkan ke board flowstream kamu
+
+![step1](/images/common/dataSorter/1.png)
+
+### 2. Atur konfigurasi dari komponen 'Trigger' seperti ini
+
+![step2](/images/common/dataSorter/configTrigger.png)
+
+### 3. Atur konfigurasi dari komponen 'Data Sorter' seperti ini
+
+![step3](/images/common/dataSorter/configDataSorter.png)
+
+### 4. Dan terakhir sambungkan setiap output ke inputan komponen seperti gambar dibawah, lalu klik Run pada komponen 'Trigger'
+
+![step4](/images/common/dataSorter/resultSuccess.png)
+
+### Penjelasan
+
+Dalam alur penggunaan:
+
+1.  Trigger:  Komponen ini digunakan sebagai pemicu untuk memulai proses pengurutan data. Dengan mengonfigurasi seperti pada gambar, Trigger akan mengirimkan data yang akan diurutkan ke Data Sorter.
+
+2.  Data Sorter: Pada langkah ini, konfigurasi komponen Data Sorter akan menentukan bagaimana data akan diurutkan. 
+    Pengguna dapat menetapkan beberapa kondisi yang akan diproses, termasuk menentukan key atau field mana yang akan dijadikan acuan pengurutan.
+    'value' disini merepresentasikan terhadap keseluruhan data yang masuk ke komponen ini, jadi ketika ada data dengan berbagai macam properti maka
+    harus menambahkan nama properti yang sesuai seperti contoh `value.name` lalu diikuti simbol operasional `!=, ==, >>, dan lain-lain` lalu value yang akan dibandingkan.
+
+3.  Output: Setelah data diurutkan, setiap kondisi yang dipenuhi oleh data akan menghasilkan output yang berbeda. Output tersebut bisa dikirim ke berbagai komponen lanjutan untuk diproses lebih lanjut.
+
+4.  Pengujian: Setelah seluruh konfigurasi selesai, pengguna bisa menjalankan alur ini melalui komponen Trigger, dan melihat hasil urutan pada setiap output yang terhubung ke komponen berikutnya.

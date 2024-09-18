@@ -1,0 +1,25 @@
+# Feed to delay
+
+Feed to Delay adalah komponen di Total.js Flow yang menunda penerusan pesan yang diterima hingga waktu tertentu. Pesan hanya akan diteruskan setelah periode timeout berlalu.
+Namun, hanya pesan terakhir yang diteruskan, sementara pesan sebelumnya diabaikan jika ada pesan baru yang masuk selama periode timeout.
+
+### Cara Kerja Feed to delay
+
+#### 1. Aktivasi Timeout
+
+Timer dimulai ketika pesan diterima
+
+Jika ada pesan tambahan yang masuk selama periode timeout, pesan tersebut menggantikan pesan sebelumnya. Jadi, hanya pesan terakhir yang akan diteruskan setelah timeout.
+
+#### 2. Pesan Hanya Diteruskan Setelah Timeout
+
+Setelah timeout selesai dan jika tidak ada pesan baru yang masuk selama periode tersebut, pesan terakhir akan diteruskan ke output.
+
+Jika pesan datang terus-menerus sebelum timeout berakhir, tidak ada pesan yang akan diteruskan karena timer terus di-reset.
+
+#### 3. Batas Maksimal Timeout
+
+Timeout maksimum adalah 2147483 detik, sekitar 28.8 hari. Ini memberikan fleksibilitas untuk aplikasi dengan kebutuhan delay yang lama.
+
+### Contoh Penggunaan Feed to Delay
+
